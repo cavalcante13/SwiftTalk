@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C3CAF39A1F43BC5F00601C0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CAF3991F43BC5F00601C0D /* AppDelegate.swift */; };
-		C3CAF39C1F43BC5F00601C0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CAF39B1F43BC5F00601C0D /* ViewController.swift */; };
-		C3CAF39F1F43BC5F00601C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CAF39D1F43BC5F00601C0D /* Main.storyboard */; };
 		C3CAF3A11F43BC5F00601C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3CAF3A01F43BC5F00601C0D /* Assets.xcassets */; };
 		C3CAF3A41F43BC5F00601C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3CAF3A21F43BC5F00601C0D /* LaunchScreen.storyboard */; };
 		C3CAF3AF1F43BC5F00601C0D /* SwiftTalkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CAF3AE1F43BC5F00601C0D /* SwiftTalkTests.swift */; };
+		C3CAF3BB1F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CAF3B91F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.swift */; };
+		C3CAF3BC1F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3CAF3BA1F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.xib */; };
+		C3CAF3C21F43BE9F00601C0D /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CAF3C11F43BE9F00601C0D /* Artist.swift */; };
+		C3CAF3C41F43BF3700601C0D /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CAF3C31F43BF3700601C0D /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +30,16 @@
 /* Begin PBXFileReference section */
 		C3CAF3961F43BC5F00601C0D /* SwiftTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftTalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CAF3991F43BC5F00601C0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C3CAF39B1F43BC5F00601C0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C3CAF39E1F43BC5F00601C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C3CAF3A01F43BC5F00601C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C3CAF3A31F43BC5F00601C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3CAF3A51F43BC5F00601C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3CAF3AA1F43BC5F00601C0D /* SwiftTalkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTalkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CAF3AE1F43BC5F00601C0D /* SwiftTalkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTalkTests.swift; sourceTree = "<group>"; };
 		C3CAF3B01F43BC5F00601C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3CAF3B91F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTalk1NetworkingViewController.swift; sourceTree = "<group>"; };
+		C3CAF3BA1F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftTalk1NetworkingViewController.xib; sourceTree = "<group>"; };
+		C3CAF3C11F43BE9F00601C0D /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		C3CAF3C31F43BF3700601C0D /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		C3CAF3981F43BC5F00601C0D /* SwiftTalk */ = {
 			isa = PBXGroup;
 			children = (
-				C3CAF3991F43BC5F00601C0D /* AppDelegate.swift */,
-				C3CAF39B1F43BC5F00601C0D /* ViewController.swift */,
-				C3CAF39D1F43BC5F00601C0D /* Main.storyboard */,
+				C3CAF3C51F43BF4200601C0D /* Commons */,
+				C3CAF3C01F43BE7000601C0D /* AppDelegate */,
+				C3CAF3BF1F43BE6100601C0D /* Models */,
+				C3CAF3BD1F43BD8E00601C0D /* 01 - Networking */,
+				C3CAF3BE1F43BDEF00601C0D /* 03 - LoadingViewControllers  */,
 				C3CAF3A01F43BC5F00601C0D /* Assets.xcassets */,
 				C3CAF3A21F43BC5F00601C0D /* LaunchScreen.storyboard */,
 				C3CAF3A51F43BC5F00601C0D /* Info.plist */,
@@ -94,6 +100,54 @@
 				C3CAF3B01F43BC5F00601C0D /* Info.plist */,
 			);
 			path = SwiftTalkTests;
+			sourceTree = "<group>";
+		};
+		C3CAF3BD1F43BD8E00601C0D /* 01 - Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C3CAF3B91F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.swift */,
+				C3CAF3BA1F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.xib */,
+			);
+			name = "01 - Networking";
+			sourceTree = "<group>";
+		};
+		C3CAF3BE1F43BDEF00601C0D /* 03 - LoadingViewControllers  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "03 - LoadingViewControllers ";
+			sourceTree = "<group>";
+		};
+		C3CAF3BF1F43BE6100601C0D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C3CAF3C11F43BE9F00601C0D /* Artist.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C3CAF3C01F43BE7000601C0D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C3CAF3991F43BC5F00601C0D /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C3CAF3C51F43BF4200601C0D /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				C3CAF3C61F43BF5700601C0D /* Networking */,
+			);
+			name = Commons;
+			sourceTree = "<group>";
+		};
+		C3CAF3C61F43BF5700601C0D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C3CAF3C31F43BF3700601C0D /* Service.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,9 +233,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CAF3BC1F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.xib in Resources */,
 				C3CAF3A41F43BC5F00601C0D /* LaunchScreen.storyboard in Resources */,
 				C3CAF3A11F43BC5F00601C0D /* Assets.xcassets in Resources */,
-				C3CAF39F1F43BC5F00601C0D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,8 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CAF39C1F43BC5F00601C0D /* ViewController.swift in Sources */,
+				C3CAF3C21F43BE9F00601C0D /* Artist.swift in Sources */,
+				C3CAF3C41F43BF3700601C0D /* Service.swift in Sources */,
 				C3CAF39A1F43BC5F00601C0D /* AppDelegate.swift in Sources */,
+				C3CAF3BB1F43BC8D00601C0D /* SwiftTalk1NetworkingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,14 +279,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C3CAF39D1F43BC5F00601C0D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3CAF39E1F43BC5F00601C0D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C3CAF3A21F43BC5F00601C0D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
