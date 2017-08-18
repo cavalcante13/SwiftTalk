@@ -9,10 +9,12 @@
 import UIKit
 
 class SwiftTalk1NetworkingViewController: UIViewController {
+    @IBOutlet weak var label: UILabel?
 
-    
+    let artist : Artist
 
     init(artist : Artist) {
+        self.artist = artist
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -22,13 +24,14 @@ class SwiftTalk1NetworkingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        label?.text = artist.artists.first?.artistName
     }
 }
 
 
 final class LoadingViewController : UIViewController {
     
-    let spinner : UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    let spinner : UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
     init<T>(service : Service<T>, build : @escaping (T?) -> UIViewController) {
         super.init(nibName: nil, bundle: nil)
@@ -50,7 +53,7 @@ final class LoadingViewController : UIViewController {
         super.viewDidLoad()
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
-        
+        spinner.color   = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         view.addSubview(spinner)
         
         NSLayoutConstraint.activate([
@@ -59,24 +62,22 @@ final class LoadingViewController : UIViewController {
             ])
         
     }
+    
     func add(content : UIViewController) {
         addChildViewController(content)
         view.addSubview(content.view)
         
         content.view.translatesAutoresizingMaskIntoConstraints = false
         content.didMove(toParentViewController: self)
+        content.view.layoutIfNeeded()
         
-        NSLayoutConstraint.activate([
-            content.view.topAnchor.constraint(equalTo: self.view.topAnchor),
-            content.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            content.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            content.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
-            ])
+        let views : [String : Any] = ["contentView" : content.view, "height" : content.view.frame.size.height]
+
+        let vertical    = NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView(height)]", options: [], metrics: views, views: views)
+        let horizontal  = NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: views, views: views)
+        
+        NSLayoutConstraint.activate(vertical + horizontal)
     }
-    
-    
-    
-    
 }
 
 

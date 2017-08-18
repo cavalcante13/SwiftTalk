@@ -28,9 +28,9 @@ struct Service<T> {
                 try? JSONSerialization.jsonObject(with: $0, options: [])
             }
             
-            dispatchQueue.async {
+            dispatchQueue.asyncAfter(deadline: DispatchTime.now() + 2.5, execute: { 
                 completion(json.flatMap(self.parse))
-            }
+            })
         }.resume()
     }
     

@@ -60,6 +60,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C393102A1F46672F00F2EA97 /* 05 - GenericTableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "05 - GenericTableView";
+			sourceTree = "<group>";
+		};
 		C3CAF38D1F43BC5F00601C0D = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +93,7 @@
 				C3CAF3BF1F43BE6100601C0D /* Models */,
 				C3CAF3BD1F43BD8E00601C0D /* 01 - Networking */,
 				C3CAF3BE1F43BDEF00601C0D /* 03 - LoadingViewControllers  */,
+				C393102A1F46672F00F2EA97 /* 05 - GenericTableView */,
 				C3CAF3A01F43BC5F00601C0D /* Assets.xcassets */,
 				C3CAF3A21F43BC5F00601C0D /* LaunchScreen.storyboard */,
 				C3CAF3A51F43BC5F00601C0D /* Info.plist */,
@@ -454,6 +462,7 @@
 				C3CAF3B51F43BC5F00601C0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3CAF3B61F43BC5F00601C0D /* Build configuration list for PBXNativeTarget "SwiftTalkTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +471,7 @@
 				C3CAF3B81F43BC5F00601C0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
