@@ -21,11 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     final fileprivate func show1Networking() {
-//        SwiftTalk1NetworkingViewController(service: Service(url: itunesUrl, parse: Artist.init))
-        let viewController          = LoadingViewController(service: Service(url: itunesUrl, parse: Artist.init)) { (Artist) -> UIViewController in
-            return SwiftTalk1NetworkingViewController(artist: Artist!)
-        }
         
+        let viewController = LoadingViewController(service: NetworkingService(url: itunesUrl, parse: Artist.init)) { (artist) -> UIViewController in
+            return SwiftTalk1NetworkingViewController(item: artist)
+        }
         viewController.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         window?.rootViewController  = viewController
         window?.makeKeyAndVisible()

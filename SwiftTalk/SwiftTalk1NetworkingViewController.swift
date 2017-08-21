@@ -11,10 +11,14 @@ import UIKit
 class SwiftTalk1NetworkingViewController: UIViewController {
     @IBOutlet weak var label: UILabel?
 
-    let artist : Artist
+    var artist : Artist?
 
-    init(artist : Artist) {
-        self.artist = artist
+    init(item : Any?) {
+        if let artist = item as? Artist {
+            self.artist = artist
+        }else if let error = item as? Error {
+            print(error)
+        }
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -24,7 +28,7 @@ class SwiftTalk1NetworkingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label?.text = artist.artists.first?.artistName
+        label?.text = artist?.artists.first?.artistName
     }
 }
 
@@ -33,13 +37,12 @@ final class LoadingViewController : UIViewController {
     
     let spinner : UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     
-    init<T>(service : Service<T>, build : @escaping (T?) -> UIViewController) {
+    init<T>(service : NetworkingService<T>, build : @escaping (T?) -> UIViewController) {
         super.init(nibName: nil, bundle: nil)
         
         spinner.startAnimating()
         service.load { [weak self] result in
             self?.spinner.stopAnimating()
-            
             let viewController = build(result)
             self?.add(content: viewController)
         }
